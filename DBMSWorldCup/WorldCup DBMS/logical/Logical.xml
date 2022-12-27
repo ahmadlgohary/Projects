@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="17C90768-1760-9C1A-8870-1533D8C68739" mainViewID="454B70E3-80F8-7F78-2303-63103DCDE930">
+<createdBy>Ahmad El-Gohary</createdBy>
+<createdTime>2022-12-27 07:06:03 UTC</createdTime>
+<ownerDesignName>WorldCup DBMS</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

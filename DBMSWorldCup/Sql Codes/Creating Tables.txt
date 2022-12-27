@@ -1,0 +1,49 @@
+CREATE TABLE Crew (
+    CrewName varchar(255),
+    Occupation varchar(255),
+    Age int
+
+);
+
+CREATE TABLE info(
+    city_name varchar2(255 char),
+    location_address varchar2(255 char),
+    date_time date,
+    match_id varchar2(20 byte)
+);
+
+CREATE TABLE Coach (
+    Age int,
+    CoachName varchar(255),
+    CoachTeam varchar(255),
+    CoachRecord varchar(255),
+    CoachCountry varchar(255),
+    PRIMARY KEY (CoachName)
+);
+
+CREATE TABLE teams(
+    numberof_wins int,
+    numberof_lost int,
+    country_name varchar2(255 char),
+    TeamName varchar2(255 char),
+    matplayed int,
+    points int,
+    numbeof_goals int,
+    Coach_Name varchar(255),
+    PRIMARY KEY (TeamName), 
+    FOREIGN KEY (Coach_Name) REFERENCES Coach(CoachName)
+);
+
+CREATE TABLE Players (
+    PlayerNum int,
+    PlayerName varchar(255),
+    PlayerPosition varchar(255),
+    NumOfRedCards int,
+    NumOfYellowCards int,
+    Goals int,
+    Fouls int,
+    Team_Name varchar(255),
+
+    PRIMARY KEY (PlayerName),
+    FOREIGN KEY (Team_Name) REFERENCES Teams(TeamName)
+);

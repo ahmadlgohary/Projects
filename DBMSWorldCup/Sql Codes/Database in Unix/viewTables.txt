@@ -1,0 +1,36 @@
+#!/bin/sh
+#export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib
+Sqlplus64"username/passwword@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.cs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<EOF
+
+create VIEW "crewTable" AS select * FROM CREW;
+select * FROM "crewTable";
+
+create VIEW "infoTable" AS select * FROM INFO;
+select * FROM "infoTable";
+
+create VIEW "coachTable" AS select * FROM COACH;
+select * FROM "coachTable";
+
+create VIEW "teamsTable" AS select * FROM TEAMS;
+select * FROM "teamsTable";
+
+create VIEW "playersTable" AS select * FROM PLAYERS;
+select * FROM "playersTable";
+
+CREATE VIEW TopScorers AS
+SELECT PLAYERNAME, GOALS
+FROM PLAYERS
+ORDER BY GOALS DESC ;
+
+CREATE VIEW TopRedCards AS
+SELECT DISTINCT PLAYERNAME, NumOfRedCards
+FROM PLAYERS
+ORDER BY NumOfRedCards DESC ;
+
+CREATE VIEW TeamslostAlot AS
+SELECT country_name, TeamName, numberof_wins
+FROM TEAMS
+WHERE numberof_wins<numberof_lost;
+
+exit;
+EOF

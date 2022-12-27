@@ -1,0 +1,185 @@
+/*crew*/
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Uki', 'Rod Man','22');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Nijisanji En', 'Box Man','26');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Mysta Rias', 'Clip Guy','24');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Ike Eveland','Down and Distance','27');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Feng Baobao', 'Juger Man','29');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Zhang Chulan', 'Ticket Guy','27');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Zhuge Qing', 'Geroge Man','26');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Wang Ye','Down and Distance','27');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Jack West', 'Ball boy','19');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Jay Fox', 'Camera Man','27');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Hughie Jackson', 'Referee','26');
+
+INSERT INTO Crew(CrewName, Occupation, Age)
+VALUES('Eren Akerman','Refreree','27');
+
+
+/*coaches*/
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('56', 'Vox Akuma','FRA', '4520', 'Canada');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('49','Roberto Martínez','BEL', '6548', 'Belgium');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('55', 'Shu Yamino', 'NOR', '5642', 'Norway');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('64','Gregg Berhalter','USA','6578', 'United States');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('56', 'Lionel Scaloni','ARG', '7456', 'Argentina');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('55','Hansi Flick','GER', '8242', 'Germany');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('64', 'Gareth Southgate', 'ENG', '1863', 'England');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('54','John Herdman','CAN','6248', 'Canada');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('58','Mike Dean','POL','7458', 'Poland');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('54','Ben Gabe','BRA','7396', 'Brazil');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('50','Luis Enrique','ESP','8467', 'Spain');
+
+INSERT INTO Coach(Age, CoachName, CoachTeam, CoachRecord, CoachCountry)
+VALUES('45','Ali Shenawy','EGY','2649', 'Egypt');
+
+/*info*/
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Toronto', '3 Midlean Ave', to_date('2022-01-02', 'yyyy-mm-dd'), '1');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Toyko', '1 Sukushi Ave', to_date('2022-03-15', 'yyyy-mm-dd'), '2');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Shanghai', '3300 Caochangmen Street', to_date('2022-06-15', 'yyyy-mm-dd'), '3');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('New York', '3 Washenten Dr', to_date('2022-10-03', 'yyyy-mm-dd'), '3');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Nanjing', '5 Wuhu ave', to_date('2022-05-06', 'yyyy-mm-dd'), '4');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Kosaka', '26 Bubu Ave', to_date('2022-04-25', 'yyyy-mm-dd'), '5');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Beijing', '563 Zainali Street', to_date('2022-02-05', 'yyyy-mm-dd'), '6');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Vancouver', '4 Nadoutong Dr', to_date('2022-06-09', 'yyyy-mm-dd'), '7');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('NYC', '5 Main ave', to_date('2022-07-06', 'yyyy-mm-dd'), '8');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Paris', '26 Bon st ', to_date('2022-08-25', 'yyyy-mm-dd'), '9');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Toronto', '563 Sheppard Street', to_date('2022-05-05', 'yyyy-mm-dd'), '10');
+
+INSERT INTO info(city_name, location_address, date_time, match_id)
+VALUES('Chicago', '4 7th ave', to_date('2022-06-19', 'yyyy-mm-dd'), '11');
+
+/*Teams*/
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('1', '1', 'Argentina', 'ARG', '2', '3', '4', 'Lionel Scaloni');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('2', '1', 'Canada', 'CAN', '3', '6', '6', 'John Herdman');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('0', '1', 'Germany',  'GER', '1', '0', '2', 'Hansi Flick');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('0', '2', 'England', 'ENG', '2', '0', '6', 'Gareth Southgate'); 
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('2', '0', 'Egypt', 'EGY', '2', '6', '4', 'Ali Shenawy');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('1', '3', 'Poland', 'POL', '3', '6', '6', 'Mike Dean');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('0', '0', 'Brazil',  'BRA', '1', '0', '2', 'Ben Gabe');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('0', '0', 'Norway', 'NOR', '2', '0', '6', 'Shu Yamino');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('1', '1', 'France', 'FRA', '2', '3', '6', 'Vox Akuma');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('3', '0', 'Spain', 'ESP', '3', '9', '4', 'Luis Enrique');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('0', '3', 'United States', 'USA', '3', '0', '2', 'Gregg Berhalter');
+
+INSERT INTO teams(numberof_wins, numberof_lost, country_name, TeamName, matplayed, points, numbeof_goals, Coach_Name)
+VALUES('1', '0', 'Belgium', 'BEL', '1', '3', '3', 'Roberto Martínez');
+
+/*players*/
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('10', 'Lionel Messi', 'RW', '2', '3', '25', '8', 'ARG');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('19', 'Alphonso Davies', 'LB', '0', '0', '3', '6', 'CAN');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('9', 'Timo Werner', 'CF', '0', '0', '5', '11', 'GER');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('47', 'Phil Foden', 'CM', '1', '0', '1', '6', 'ENG');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('11', 'Mo Salah', 'RW', '0', '2', '35', '4', 'EGY');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('7', 'Kylian Mbappe', 'ST', '3', '5', '10', '4', 'FRA');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('5', 'Erling Haaland', 'CF', '0', '0', '5', '11', 'NOR');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('9', 'Robert Lewandowski', 'CF', '1', '0', '8', '6', 'POL');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('9', 'Pedri', 'CM', '0', '0', '1', '7', 'ESP');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('10', 'Christian Pulisic', 'RW', '0', '1', '0', '4', 'USA');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('7', 'Kevin De Bruyne', 'CAM', '0', '0', '1', '5', 'BEL');
+
+INSERT INTO Players(PlayerNum, PlayerName, PlayerPosition, NumOfRedCards, NumOfYellowCards, Goals, Fouls, Team_Name)
+VALUES('19', 'Karim Benzema', 'CF', '0', '0', '3', '7', 'FRA');
