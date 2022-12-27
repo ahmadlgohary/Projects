@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="WorldCup DBMS" id="3805B10D-8697-2931-230B-FF40EEA94A75" version="3.5">
+<createdBy>Ahmad El-Gohary</createdBy>
+<createdTime>2022-12-27 07:06:03 UTC</createdTime>
+<ownerDesignName>WorldCup DBMS</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>3805B10D-8697-2931-230B-FF40EEA94A75</designId>
+</OSDM_Design>
