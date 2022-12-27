@@ -1,0 +1,4 @@
+Twitter Bot For Soccer Matches using python
+The original plan was to make it for the world cup but i got the idea during midterm season and the world cup was during finals so now the goal is to make it for the priemer league.
+
+The goal of the project is to Code a python script and connect it to a twitter account API and the script would tweet updates about ongoing games. And learn about python automation and use APIs more as this would be my second project using an API
