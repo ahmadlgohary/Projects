@@ -1,4 +1,0 @@
-Arcade Style Fighting Game using Unity and C#
-The goal is to make a a retro style combat arcade video game implemented using C# and Unity like like Street Fighter, become more confident in working with C# and  to learn more about videogame development and design.
-Also maybe build an arcade style control board to use while playing the game.
-
