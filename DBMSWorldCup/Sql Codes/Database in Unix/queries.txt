@@ -1,0 +1,63 @@
+#!/bin/sh
+#export LD_LIBRARY_PATH=/usr/lib/oracle/12.1/client64/lib
+sqlplus64"username/password@DESCRIPTION=ADDRESS=PROTOCOL=TCP)Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<EOF
+
+SELECT * FROM COACH;
+
+SELECT DISTINCT CoachName, coachTeam FROM COACH;
+
+SELECT * FROM CREW WHERE OCCUPATION = 'Referee';
+
+SELECT * FROM INFO WHERE CITY_NAME = 'Toronto' or CITY_NAME = 'Paris';
+
+SELECT * FROM PLAYERS WHERE NOT TEAM_NAME='FRA' ORDER BY GOALS DESC;
+
+SELECT * FROM TEAMS WHERE TEAMNAME='BEL' OR NUMBEROF_GOALS>'2';
+
+SELECT COACH.COACHNAME, TEAMS.TEAMNAME, TEAMS.NUMBEOF_GOALS, PLAYERS.PLAYERNAME, PLAYERS.GOALS
+FROM (PLAYERS
+INNER JOIN TEAMS ON (PLAYERS.GOALS >= TEAMS.NUMBEOF_GOALS) AND (PLAYERS.TEAM_NAME = TEAMS.TEAMNAME))
+INNER JOIN COACH ON COACH.COACHNAME = TEAMS.COACH_NAME
+
+SELECT TEAMS.numberof_wins, TEAMS.numberof_lost, TEAMS.matplayed, Coach.CoachRecord, Coach.CoachName
+FROM TEAMS
+LEFT JOIN COACH ON (TEAMS.TeamName != COACH.CoachCountry) AND ((Coach.CoachTeam = TEAMS.TEAMNAME) AND (TEAMS.numberof_wins > TEAMS.numberof_lost));
+
+SELECT TEAMS.country_name, TEAMS.numberof_wins, TEAMS.numberof_lost, PLAYERS.PlayerName, PLAYERS.goals, PLAYERS.PlayerPosition
+FROM TEAMS
+INNER JOIN PLAYERS
+ON PLAYERS.Team_Name = TEAMS.TeamName;
+
+SELECT playerName, Goals
+FROM Players
+WHERE EXISTS
+(SELECT TeamName FROM Teams WHERE points > '3');
+
+SELECT COUNT(playernum), team_name
+FROM players
+GROUP BY team_name
+HAVING COUNT(playernum) > 1;
+
+SELECT CoachTeam, CoachCountry FROM Coach
+WHERE CoachCountry='Canada'
+UNION
+SELECT country_name, TeamName FROM teams
+WHERE country_name ='Canada'
+ORDER BY CoachTeam;
+
+
+
+SELECT COUNT(Occupation)
+From Crew;
+
+
+
+SELECT TeamName
+FROM teams
+WHERE TeamName = 'GER'
+MINUS
+SELECT Team_Name
+FROM Players;
+
+exit;
+EOF

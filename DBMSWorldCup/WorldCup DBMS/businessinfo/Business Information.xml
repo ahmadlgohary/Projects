@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="21675E85-E3F6-1B9D-A0F2-DA0253525AE5">
+<createdBy>Ahmad El-Gohary</createdBy>
+<createdTime>2022-12-27 07:06:03 UTC</createdTime>
+<ownerDesignName>WorldCup DBMS</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>
