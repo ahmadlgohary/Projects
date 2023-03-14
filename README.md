@@ -11,5 +11,7 @@ My personal and academic projects are posted here and will be updated regularly:
 This repository also has projects in progress such as
 1. Arcade Style Fighting Video game using C#
 2. Twitter sports Bot that tweets the score of ongoing games in a certain league using python and twitter API
+3. Going to be working on some ML and AL projects over the summer
 
+note: these projects are on hold as i am busy with my school work but in the summer i should finish them
 I am trying to grow this repository over the years and i just started 
