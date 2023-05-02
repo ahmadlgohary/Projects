@@ -3,61 +3,48 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package groupProject;
+package mainapp;
 
 /**
  *
- * @author Ahmad El-Gohary
+ * @author ahmad
  */
 public class Customers {
-    private String username;
-    private String password;
+    private final String username;
+    private final String password;
     private int points;
-    private String Status;
+    private String status; //just testing have to use status abstract class and implement state design pattern
 
-    public Customers(String username, String password, int points ) {
+    Customers(String username, String password) {
         this.username = username;
         this.password = password;
-        this.points   = points;
-        setStatus(points); 
+        points = 0;
+        setStatus(points);
     }
 
-    
     public String getUsername() {
         return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-    
     public int getPoints() {
         return points;
     }
-
     public void setPoints(int points) {
-        this.points += points;
+        this.points = this.points + points;
         setStatus(this.points);
     }
+
     public String getStatus() {
-        return Status;
+        return status;
     }
-
-    public void setStatus(int points) {
-        if(points<1000){
-            this.Status="Sliver";
+    private void setStatus(int points) {
+        if(points>1000){
+            status = "Gold";
         }
-        else{
-            this.Status="Gold";
-
-        }
+        else status = "Silver";
     }
 }
