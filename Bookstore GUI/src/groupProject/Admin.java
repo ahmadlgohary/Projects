@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package groupProject;
+package mainapp;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 /**
  *
- * @author Ahmad El-Gohary
+ * @author ahmad
  */
 public class Admin {
     private static final Saving files = new Saving();
-    protected static ArrayList<Books> books = new ArrayList<>();
+    protected static ArrayList<Books> books = new ArrayList<>(); //do same here as customer
     private static final ArrayList<Customers> customers = new ArrayList<>();
 
-    public void restockArrays() throws IOException {
-        ArrayList<Books> tempBooks = files.readBookFile();
-        ArrayList<Customers> tempCustomers = files.readCustomerFile();
-        books.addAll(tempBooks);
-        customers.addAll(tempCustomers);
+public void retrieveLists() throws IOException {
+        ArrayList<Books> temporaryBooks = files.readFromBooksTextFile();
+        ArrayList<Customers> temporaryCustomers = files.readFromCustomerTextFile();
+        books.addAll(temporaryBooks);
+        customers.addAll(temporaryCustomers);
     }
 
     public String getUsername(){
@@ -31,15 +31,16 @@ public class Admin {
         return "admin";
     }
 
-    public void addCustomer(Customers c){
-        customers.add(c);
+    public void addCustomerToTable(Customers created){
+        customers.add(created);
     }
 
-    public void deleteCustomer(Customers c){
-        customers.remove(c);
+    public void deleteCustomerFromTable(Customers selected){
+        customers.remove(selected);
     }
-    @SuppressWarnings({"un-checked", "unchecked"})
+
+    @SuppressWarnings("unchecked")
     public ArrayList<Customers> getCustomers(){
-        return (ArrayList<Customers>) customers.clone(); //casting?
+        return (ArrayList<Customers>) customers.clone();
     }
 }
