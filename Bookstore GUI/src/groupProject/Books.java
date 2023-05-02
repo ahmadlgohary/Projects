@@ -3,28 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package groupProject;
+package mainapp;
+
 import javafx.scene.control.CheckBox;
 
 /**
  *
- * @author Ahmad El-Gohary
+ * @author ahmad
  */
-
 public class Books {
-
-    private final String title;
+    private final String bookName;
     private final double bookPrice;
     public CheckBox select;
 
-    public Books(String title, double bookPrice) {
-        this.title = title;
+    public Books(String bookName, double bookPrice) {
+        this.bookName = bookName;
         this.bookPrice = bookPrice;
         select = new CheckBox();
     }
 
-    public String getTitle() {
-        return this.title;
+    public String getBookName() {
+        return this.bookName;
     }
 
     public double getBookPrice() {
@@ -38,5 +37,4 @@ public class Books {
     public void setSelect(CheckBox select) {
         this.select = select;
     }
-    
 }
