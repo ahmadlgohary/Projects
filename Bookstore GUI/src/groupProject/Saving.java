@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package groupProject;
-import java.io.File;
+package mainapp;
+
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,62 +13,67 @@ import java.util.Scanner;
 
 /**
  *
- * @author Ahmad El-Gohary
+ * @author ahmad
  */
 public class Saving {
     
-    public void saveBooks2Files(ArrayList<Books> book) throws IOException{
-        FileWriter saveBooks = new FileWriter("bookList.txt"); 
-            for(Books b: book){
-                saveBooks.write(b.getTitle() + ", " + b.getBookPrice() + "\n");
-            }
-        saveBooks.close();
-    }
-    
-    public void saveCustomers2Files(ArrayList<Customers> Customer) throws IOException{
-        FileWriter saveCustomers = new FileWriter("CustomersList.txt"); 
-            for(Customers c: Customer){
-                saveCustomers.write(c.getUsername() + ", " + c.getPassword()  + ", " + c.getPoints() + "\n");
-            }
-        saveCustomers.close();
-    }
-    
-    
-        public void resetBookFile() throws IOException {
-        FileWriter bookFile = new FileWriter("bookList.txt", false);
-        bookFile.close();
-    }
-        
-    public void resetCustFile() throws IOException {
-        FileWriter customerFile = new FileWriter("CustomersList.txt", false);
-        customerFile.close();
+    //all elements(Books and Customers) will be written into a txt file
+    public void bookFileWrite(ArrayList<Books> books) throws IOException{
+        FileWriter booksTextFile = new FileWriter("books.txt", true);
+        for(Books boo: books){
+            String aBook = boo.getBookName() + ", " + boo.getBookPrice() + "\n";
+            booksTextFile.write(aBook);
+        }
+        booksTextFile.close();
     }
 
-    public ArrayList<Books> readBookFile() throws IOException{
-        Scanner scan = new Scanner(new FileReader("bookList.txt"));
-        ArrayList<Books> tempBookList = new ArrayList<>();
+    public void customerFileWrite(ArrayList<Customers> customers) throws IOException{
+        FileWriter customerTextFile = new FileWriter("customers.txt", true);
+        for(Customers cust: customers){
+            String aCustomer = cust.getUsername() + ", " + cust.getPassword() + ", " + cust.getPoints() + "\n";
+            customerTextFile.write(aCustomer);
+        }
+        customerTextFile.close();
+    }
 
-        while(scan.hasNext()) {
-            String[] bookInfo = scan.nextLine().split(",");
+    //allows overwriting
+    public void bookFileReset() throws IOException {
+        FileWriter booksTextFile = new FileWriter("books.txt", false);
+        booksTextFile.close();
+    }
+
+    public void customerFileReset() throws IOException {
+        FileWriter customerTextFile = new FileWriter("customers.txt", false);
+        customerTextFile.close();
+    }
+
+    //reads from text file and transfer it into temporary array to be used
+    public ArrayList<Books> readFromBooksTextFile() throws IOException{
+        Scanner scanner = new Scanner(new FileReader("books.txt"));
+        ArrayList<Books> temporaryBook = new ArrayList<>();
+
+        while(scanner.hasNext()) {
+            String[] bookInfo = scanner.nextLine().split(",");
             String title = bookInfo[0];
             double price = Double.parseDouble(bookInfo[1]);
-            tempBookList.add(new Books(title, price));
+            temporaryBook.add(new Books(title, price));
         }
-        return tempBookList;
+        return temporaryBook;
     }
 
-    public ArrayList<Customers> readCustomerFile() throws IOException{
-        Scanner scan = new Scanner(new FileReader("CustomersList.txt"));
-        ArrayList<Customers> tempCustList = new ArrayList<>();
+    public ArrayList<Customers> readFromCustomerTextFile() throws IOException{
+        Scanner scanner = new Scanner(new FileReader("customers.txt"));
+        ArrayList<Customers> tempCustomer = new ArrayList<>();
 
-        while(scan.hasNext()) {
-            String[] customerInfo = scan.nextLine().split(", ");
-            String username = customerInfo[0];
-            String password = customerInfo[1];
-            int points = Integer.parseInt(customerInfo[2]);
-            tempCustList.add(new Customers(username, password, points));
-            //tempCustomerHolder.get(tempCustomerHolder.size()-1).setPoints(points);
+        while(scanner.hasNext()) {
+            String[] customerInfo = scanner.nextLine().split(", ");
+            String username = customerInfo[0]; //username is the first element in the array
+            String password = customerInfo[1]; //password is the second element in the array
+            int points = Integer.parseInt(customerInfo[2]); //points is the third element in the array
+            tempCustomer.add(new Customers(username, password));
+            tempCustomer.get(tempCustomer.size()-1).setPoints(points);
         }
-        return tempCustList;
-    }    
+        return tempCustomer;
+    }
+
 }
