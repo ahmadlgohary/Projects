@@ -188,7 +188,7 @@ public class MainApp extends Application {
         Group loginscreen = new Group();
 
         HBox topSide = new HBox();
-        Label titleOfScreen = new Label("Group 58's Library App");
+        Label titleOfScreen = new Label("Book Store App");
         titleOfScreen.setStyle(" -fx-alignment: CENTER;");
         titleOfScreen.setFont(new Font("Arial", 38));
         topSide.getChildren().addAll(titleOfScreen);
